@@ -38,7 +38,7 @@ const bookingSchema = new Schema<IBooking>(
     },
   },
   {
-    timestamps: true, // Automatically adds createdAt and updatedAt
+    timestamps: true, // Automatically adds createdAt and... updatedAt
   }
 );
 
