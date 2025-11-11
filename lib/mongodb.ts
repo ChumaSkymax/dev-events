@@ -16,7 +16,7 @@ interface MongooseCache {
  */
 declare global {
   // eslint-disable-next-line no-var
-  var mongoose: MongooseCache | undefined;
+  var mongooseCache: MongooseCache | undefined;
 }
 
 /**
@@ -24,10 +24,10 @@ declare global {
  * Uses a global variable that persists across hot reloads in development
  */
 const getMongooseCache = (): MongooseCache => {
-  if (!global.mongoose) {
-    global.mongoose = { conn: null, promise: null };
+  if (!global.mongooseCache) {
+    global.mongooseCache = { conn: null, promise: null };
   }
-  return global.mongoose;
+  return global.mongooseCache;
 };
 
 /**
